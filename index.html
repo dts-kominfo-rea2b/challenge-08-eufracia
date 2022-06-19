@@ -41,19 +41,19 @@
       function fnClickHandler(toDoItem) {
         if (toDoItem?.type === 'click' || toDoItem?.key === "Enter" || toDoItem?.which === 13) {
           const li = document.createElement('li')
-          const textValue = document.createTextNode(inputValue)
+          const textValue = document.createTextNode(inputData)
           li.appendChild(textValue)
           const list = output.children
           output.append(li, ...list)
 
-          inputValue = ''
+          inputData = ''
           input.value = ''
         }
       }
 
       function fnHandleInputChange(event) {
         if (event?.target?.value?.length > 0) {
-          inputValue = event?.target?.value
+          inputData = event?.target?.value
         }
       }
 
